@@ -57,7 +57,7 @@ function App() {
         <button id="create"onClick={handleNoteAdd}>ノート追加</button>
         <ul>
           {notes.map((note)=>(
-            <li id={note.id}className={selectedNote.id==note.id ?"selected":""}>
+            <li id={note.id}className={selectedNote.id===note.id ?"selected":""}>
             <button onClick={() => handleDelete(note.id)} className='delete'>削除</button>
             <span onClick={() => handleSelect(note)}>{note.text}</span>
           </li>
