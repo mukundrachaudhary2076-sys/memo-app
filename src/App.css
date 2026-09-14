@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -7,32 +7,260 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
-  flex-direction: column;
+}
+
+.sidebar {
+  height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+  overflow-y: auto;
+
+  flex-shrink: 0;
+  flex-basis: 250px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  margin-top : 10px;
+}
+
+.sidebar li {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.sidebar li,
+.sidebar li * {
+  cursor: pointer;
+}
+
+.sidebar li.selected {
+  background-color: #d2e0e6;
+}
+
+.sidebar .delete {
+  margin-right: 10px;
+  flex-shrink: 0;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.sidebar span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+
+}
+
+.main {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.main h2 {
+  margin-bottom: 20px;
+}
+
+.main textarea {
+  width: 100%;
+  height: 400px;
+  padding: 15px;
+  border: none;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.main textarea:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.main save {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+#create {
+  background-color: #0b19df;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+}
+
+.sidebar {
+  background-color: #f4f4f4;
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto;
+
+  flex-shrink: 0;
+  flex-basis: 250px;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.sidebar li,
+.sidebar li * {
+  cursor: pointer;
+}
+
+.sidebar li.selected {
+  background-color: #d2e0e6;
+}
+
+.sidebar .delete {
+  margin-right: 8px;
+  flex-shrink: 0;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+
+.sidebar span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+
+.main {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.main h2 {
+  margin-bottom: 20px;
+}
+
+.main textarea {
+  width: 100%;
+  height: 400px;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.main textarea:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.main .save {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#create {
+  background-color: #3498db;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width:  10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
